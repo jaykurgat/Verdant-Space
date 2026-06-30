@@ -14,19 +14,16 @@ const pillars = [
     icon: Users,
     title: 'People',
     description: 'Empowering communities, students, professionals, policymakers, and organizations through accessible environmental knowledge.',
-    accent: 'Community & Stewardship',
   },
   {
     icon: Leaf,
     title: 'Nature',
     description: 'Promoting the conservation, restoration, and sustainable management of forests, biodiversity, wildlife, and natural ecosystems.',
-    accent: 'Ecology & Earth Systems',
   },
   {
     icon: BookOpen,
     title: 'Knowledge',
     description: 'Sharing research, data, practical insights, and innovations that drive informed environmental action.',
-    accent: 'Research & Innovation',
   },
 ]
 
@@ -52,7 +49,6 @@ function PillarSection() {
                 <pillar.icon size={22} className="text-verdant" />
               </div>
               <div>
-                <p className="font-accent text-sage text-sm mb-1">{pillar.accent}</p>
                 <h3 className="heading-sm mb-3">{pillar.title}</h3>
                 <p className="body-text text-sm leading-7">{pillar.description}</p>
               </div>
