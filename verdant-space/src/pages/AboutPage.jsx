@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Mail, MapPin, Send, Check, Shield, Leaf, Users, Lightbulb, Sprout, BookOpen } from 'lucide-react'
+import { Mail, MapPin, Send, Check, Shield, Leaf, Users, Lightbulb, Sprout, BookOpen, Target } from 'lucide-react'
 import { useScrollFade } from '../hooks/useScrollFade'
 
 const values = [
@@ -45,6 +45,14 @@ const focusAreas = [
   'Green Innovation and Technology',
   'Environmental Research',
   'Environmental Education',
+]
+
+const objectives = [
+  'Promote environmental awareness and education.',
+  'Publish reliable and evidence-based environmental content.',
+  'Support forest conservation and restoration initiatives.',
+  'Advocate for biodiversity protection and climate resilience.',
+  'Encourage sustainable livelihoods and community participation.',
 ]
 
 function ContactForm() {
@@ -157,10 +165,11 @@ function ContactForm() {
 
 export default function AboutPage() {
   const heroRef    = useScrollFade()
-  const storyRef   = useScrollFade()
-  const missionRef = useScrollFade()
-  const focusRef   = useScrollFade()
-  const valuesRef  = useScrollFade()
+  const storyRef     = useScrollFade()
+  const missionRef   = useScrollFade()
+  const objectivesRef = useScrollFade()
+  const focusRef     = useScrollFade()
+  const valuesRef    = useScrollFade()
 
   return (
     <div className="min-h-screen pt-24">
@@ -246,6 +255,40 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── Strategic Objectives ─────────────────────────── */}
+      <section ref={objectivesRef} className="py-24 px-6 bg-warm-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14 space-y-3">
+            <span className="accent-line">Strategic Objectives</span>
+            <h2 className="heading-lg">What We Set Out to Do</h2>
+            <p className="body-text max-w-xl mx-auto">
+              Every piece of content we publish is guided by a clear set of objectives.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {objectives.map((obj, i) => (
+              <div key={i} className="flex gap-4 p-6 border border-sage/20 rounded-sm hover:border-verdant/30 transition-colors">
+                <div className="w-9 h-9 bg-forest rounded-sm flex items-center justify-center flex-shrink-0">
+                  <span className="font-serif text-warm-white text-sm">{i + 1}</span>
+                </div>
+                <p className="body-text text-sm leading-6 pt-1">{obj}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Brand Promise ─────────────────────────────────── */}
+      <section className="py-16 px-6 bg-verdant">
+        <div className="max-w-3xl mx-auto text-center space-y-4">
+          <Target size={28} className="text-warm-white mx-auto" />
+          <p className="font-accent text-warm-white/80 text-base">Our Brand Promise</p>
+          <p className="font-serif text-2xl md:text-3xl text-warm-white leading-snug">
+            Committed to delivering credible, evidence-based environmental knowledge that informs decisions, inspires action, and supports sustainable development.
+          </p>
+        </div>
+      </section>
+
       {/* ── Areas of Focus ───────────────────────────────── */}
       <section ref={focusRef} className="py-24 px-6 bg-warm-white">
         <div className="max-w-6xl mx-auto">
@@ -276,7 +319,7 @@ export default function AboutPage() {
             <span className="accent-line">What Guides Us</span>
             <h2 className="heading-lg">Core Values</h2>
             <p className="body-text max-w-xl mx-auto">
-              Our brand promise: delivering credible, evidence-based environmental knowledge that informs decisions, inspires action, and supports sustainable development.
+              The principles that guide everything we research, write, and publish.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

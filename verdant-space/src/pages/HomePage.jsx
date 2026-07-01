@@ -206,8 +206,8 @@ export default function HomePage() {
           className="absolute inset-0 bg-center bg-cover"
           style={{ backgroundImage: `url(${hero.imageUrl})` }}
         >
-          <div className="absolute inset-0 bg-forest/65" />
-          <div className="absolute inset-0 bg-gradient-to-b from-forest/30 via-transparent to-forest/80" />
+          <div className="absolute inset-0 bg-forest/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-forest/50 via-forest/20 to-forest/85" />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-8 pt-20 animate-fade-up">
