@@ -12,20 +12,20 @@ const pillars = [
   {
     icon: Users,
     title: 'People',
-    description: 'The communities who live closest to nature—pastoralists, farmers, forest guardians—hold irreplaceable knowledge about the land and its rhythms.',
+    description: 'Empowering communities, students, professionals, policymakers, and organizations through accessible environmental knowledge.',
     accent: 'Community & Stewardship',
   },
   {
     icon: Leaf,
     title: 'Nature',
-    description: 'From mycorrhizal networks to monsoon patterns, the natural world operates with a complexity and intelligence that science is only beginning to articulate.',
+    description: 'Promoting the conservation, restoration, and sustainable management of forests, biodiversity, wildlife, and natural ecosystems.',
     accent: 'Ecology & Earth Systems',
   },
   {
     icon: BookOpen,
     title: 'Knowledge',
-    description: 'Bridging indigenous wisdom with contemporary science, building a shared language for the environmental challenges of our time.',
-    accent: 'Research & Storytelling',
+    description: 'Sharing research, data, practical insights, and innovations that drive informed environmental action.',
+    accent: 'Research & Innovation',
   },
 ]
 
@@ -38,7 +38,7 @@ function PillarSection() {
           <span className="accent-line">What We Stand For</span>
           <h2 className="heading-lg">Three Pillars of Understanding</h2>
           <p className="body-text max-w-xl mx-auto">
-            Verdant Space lives at the intersection of community, ecology, and knowledge — where the most important environmental conversations are happening.
+            Verdant Space lives at the intersection of people, nature, and knowledge — where the most important environmental conversations are happening.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -58,6 +58,42 @@ function PillarSection() {
             </div>
           ))}
         </div>
+      </div>
+    </section>
+  )
+}
+
+function ObjectivesSection() {
+  const ref = useScrollFade()
+  const objectives = [
+    'Promote environmental awareness and education',
+    'Publish reliable and evidence-based environmental content',
+    'Support forest conservation and restoration initiatives',
+    'Advocate for biodiversity protection and climate resilience',
+    'Encourage sustainable livelihoods and community participation',
+  ]
+  return (
+    <section ref={ref} className="py-24 px-6 bg-forest">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div className="space-y-4">
+          <span className="font-accent text-sage text-lg">Our Commitment</span>
+          <h2 className="font-serif text-4xl text-warm-white leading-tight">
+            What We Set Out to Do
+          </h2>
+          <p className="font-sans text-warm-white/60 text-sm leading-7">
+            Every piece of content we publish is guided by a clear set of objectives — rooted in science, driven by community, and committed to a sustainable future.
+          </p>
+        </div>
+        <ul className="space-y-4">
+          {objectives.map((obj, i) => (
+            <li key={i} className="flex items-start gap-4">
+              <span className="w-6 h-6 rounded-sm bg-sage/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span className="font-serif text-sage text-xs">{i + 1}</span>
+              </span>
+              <span className="font-sans text-sm text-warm-white/80 leading-6">{obj}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )
@@ -106,19 +142,12 @@ function GalleryPreviewSection({ images }) {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {preview.map((image, i) => (
-            <div
-              key={image.id}
-              className={i === 0 ? 'col-span-2 md:col-span-1' : ''}
-            >
-              <GalleryCard
-                image={image}
-                onClick={() => setLightboxIndex(i)}
-              />
+            <div key={image.id} className={i === 0 ? 'col-span-2 md:col-span-1' : ''}>
+              <GalleryCard image={image} onClick={() => setLightboxIndex(i)} />
             </div>
           ))}
         </div>
       </div>
-
       {lightboxIndex !== null && (
         <Lightbox
           images={preview}
@@ -135,15 +164,15 @@ function GalleryPreviewSection({ images }) {
 function QuoteSection() {
   const ref = useScrollFade()
   return (
-    <section ref={ref} className="py-24 px-6 bg-forest">
+    <section ref={ref} className="py-24 px-6 bg-sage/10">
       <div className="max-w-3xl mx-auto text-center space-y-6">
-        <span className="font-accent text-sage text-xl">"</span>
-        <p className="font-serif text-3xl md:text-4xl text-warm-white leading-relaxed italic">
-          The Earth does not belong to us. We belong to the Earth.
+        <span className="font-accent text-verdant text-4xl leading-none">"</span>
+        <p className="font-serif text-3xl md:text-4xl text-forest leading-relaxed italic">
+          Knowledge has the power to transform how people relate to nature.
         </p>
         <div className="w-12 h-px bg-sage mx-auto" />
-        <p className="font-sans text-sm text-warm-white/50">
-          A guiding principle at Verdant Space
+        <p className="font-sans text-sm text-light-grey">
+          The founding belief of Verdant Space
         </p>
       </div>
     </section>
@@ -151,8 +180,8 @@ function QuoteSection() {
 }
 
 export default function HomePage() {
-  const [hero, setHero] = useState(null)
-  const [posts, setPosts] = useState([])
+  const [hero, setHero]       = useState(null)
+  const [posts, setPosts]     = useState([])
   const [gallery, setGallery] = useState([])
   const [loading, setLoading] = useState(true)
 
@@ -171,9 +200,8 @@ export default function HomePage() {
 
   return (
     <div>
-      {/* HERO */}
+      {/* ── HERO ──────────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background */}
         <div
           className="absolute inset-0 bg-center bg-cover"
           style={{ backgroundImage: `url(${hero.imageUrl})` }}
@@ -182,16 +210,13 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-forest/30 via-transparent to-forest/80" />
         </div>
 
-        {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-8 pt-20 animate-fade-up">
           <p className="font-accent text-sage text-lg tracking-wide">
             Welcome to Verdant Space
           </p>
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-warm-white leading-tight">
             {heroLines.map((line, i) => (
-              <span key={i} className="block">
-                {line}
-              </span>
+              <span key={i} className="block">{line}</span>
             ))}
           </h1>
           <p className="font-sans text-warm-white/75 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
@@ -210,7 +235,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
           <ChevronDown size={24} className="text-warm-white/40" />
         </div>
@@ -218,6 +242,7 @@ export default function HomePage() {
 
       <PillarSection />
       <LatestPostsSection posts={posts} />
+      <ObjectivesSection />
       <QuoteSection />
       <GalleryPreviewSection images={gallery} />
     </div>

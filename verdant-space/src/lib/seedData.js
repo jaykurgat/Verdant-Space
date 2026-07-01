@@ -1,18 +1,19 @@
-// Seed data that works without Supabase
 export const seedHero = {
   title: 'Connecting People,\nNature & Knowledge',
-  tagline: 'A living archive of environmental thought, ecological storytelling, and the quiet intelligence of the natural world.',
+  tagline: 'Africa\'s trusted digital platform for environmental knowledge — transforming science, field experience, and community insight into content that inspires informed action.',
   imageUrl: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80',
 }
 
 export const seedCategories = [
-  'Forestry',
-  'Climate Change',
+  'Forestry and Forest Conservation',
+  'Climate Change and Adaptation',
   'Ecological Restoration',
-  'Biodiversity',
-  'Indigenous Knowledge',
-  'Urban Nature',
-  'Marine Ecosystems',
+  'Environmental Policy and Governance',
+  'Community-Based Conservation',
+  'Nature-Based Solutions',
+  'Green Innovation and Technology',
+  'Environmental Research',
+  'Environmental Education',
 ]
 
 export const seedPosts = [
@@ -20,12 +21,12 @@ export const seedPosts = [
     id: '1',
     title: 'The Silent Language of Old-Growth Forests',
     subtitle: 'How mycorrhizal networks carry memory, signal, and solidarity beneath our feet',
-    category: 'Forestry',
+    category: 'Forestry and Forest Conservation',
     body: `## The Underground Internet
 
-There is a world beneath our feet that most of us will never see—a vast, ancient network of fungal threads called mycorrhizae that connects the roots of trees in what scientists have begun calling the "Wood Wide Web."
+There is a world beneath our feet that most of us will never see — a vast, ancient network of fungal threads called mycorrhizae that connects the roots of trees in what scientists have begun calling the "Wood Wide Web."
 
-These networks don't just transfer nutrients. They carry signals. A tree under attack by insects can send chemical warnings through the network to neighboring trees, which then ramp up their own defenses. Mother trees—the oldest, largest trees in a forest—preferentially feed their own seedlings through these connections, even recognizing kin.
+These networks don't just transfer nutrients. They carry signals. A tree under attack by insects can send chemical warnings through the network to neighbouring trees, which then ramp up their own defences. Mother trees — the oldest, largest trees in a forest — preferentially feed their own seedlings through these connections, even recognising kin.
 
 > "The forest is not a collection of individuals competing for light. It is a community, knit together by relationship, sustained by reciprocity."
 
@@ -37,11 +38,11 @@ The tragedy of industrial forestry is not simply the loss of individual trees. I
 
 ## Listening More Carefully
 
-Researcher Suzanne Simard spent decades in the forests of British Columbia listening—through lab equipment and careful observation—to what the trees were saying to each other. What she found overturned the dominant model of nature as competition and replaced it with something far more interesting: nature as cooperation, as kinship, as mutual care.
+Researcher Suzanne Simard spent decades in the forests of British Columbia listening — through lab equipment and careful observation — to what the trees were saying to each other. What she found overturned the dominant model of nature as competition and replaced it with something far more interesting: nature as cooperation, as kinship, as mutual care.
 
-This has implications not just for how we manage forests, but for how we understand community, interdependence, and what it means to thrive.
+This has implications not just for how we manage forests, but for how we understand community, interdependence, and what it means to thrive together.
 
-The forest is teaching us something. The question is whether we're willing to learn.`,
+The forest is teaching us something. The question is whether we are willing to learn.`,
     imageUrl: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&q=80',
     author: 'Verdant Space',
     publishedAt: '2024-06-15T09:00:00Z',
@@ -50,15 +51,15 @@ The forest is teaching us something. The question is whether we're willing to le
   {
     id: '2',
     title: 'Rewilding the Riverbanks of the Rift Valley',
-    subtitle: 'A field report from Kenya\'s Tana River — where restoration meets resistance',
+    subtitle: 'A field report from Kenya\'s Tana River — where restoration meets community',
     category: 'Ecological Restoration',
     body: `## Where the River Remembers
 
-The Tana River in Kenya is one of East Africa's most important waterways. It rises in the Aberdare Range, cuts through the country for nearly 1000 kilometers, and empties into the Indian Ocean near Garsen. For thousands of years, its seasonal floods deposited rich sediment along its banks, creating one of the most biodiverse corridors on the continent.
+The Tana River in Kenya is one of East Africa's most important waterways. It rises in the Aberdare Range, cuts through the country for nearly 1000 kilometres, and empties into the Indian Ocean near Garsen. For thousands of years, its seasonal floods deposited rich sediment along its banks, creating one of the most biodiverse corridors on the continent.
 
 That corridor is disappearing.
 
-## The Problem with "Progress"
+## The Problem
 
 Agricultural encroachment, charcoal production, and poorly managed irrigation schemes have stripped the riverbanks of their gallery forests. Without tree roots to hold the soil, the banks erode. Without shade, the water warms. Without the insects that live in the leaf litter, the fish populations collapse.
 
@@ -66,17 +67,15 @@ Agricultural encroachment, charcoal production, and poorly managed irrigation sc
 
 ## What Restoration Looks Like
 
-The Tana River Restoration Project, a collaboration between local communities and conservation organizations, has been replanting native riparian species along a 40-kilometer stretch of the river. But the work is more than planting trees.
+The Tana River Restoration Project, a collaboration between local communities and conservation organisations, has been replanting native riparian species along a 40-kilometre stretch of the river. But the work is more than planting trees.
 
-It involves negotiating with farming communities about buffer zones. It means training local people as forest monitors. It requires patience—a young Ficus sycomorus tree planted today won't provide meaningful shade for another decade.
+It involves negotiating with farming communities about buffer zones. It means training local people as forest monitors. It requires patience — a young Ficus sycomorus tree planted today won't provide meaningful shade for another decade.
 
 The project has replanted over 80,000 trees since 2019. The results are already visible: sections of the riverbank that were bare clay two years ago are now green with young growth.
 
 ## The Human Dimension
 
-What doesn't appear in project reports is the social dimension of this work. The women's groups who do most of the planting. The elders who remember what the forest used to look like. The teenagers who carry seedlings in the early morning before school.
-
-Restoration is not just an ecological project. It is a relational one.`,
+Restoration is not just an ecological project. It is a relational one — built on the knowledge and participation of the communities who depend on the river every day.`,
     imageUrl: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1200&q=80',
     author: 'Verdant Space',
     publishedAt: '2024-05-28T08:00:00Z',
@@ -84,36 +83,34 @@ Restoration is not just an ecological project. It is a relational one.`,
   },
   {
     id: '3',
-    title: 'What the IPCC Reports Miss About Local Climate Grief',
-    subtitle: 'Numbers don\'t capture the loss of a glacier, a season, a way of life',
-    category: 'Climate Change',
-    body: `## The Limits of Data
+    title: 'Beyond Carbon: Understanding What Forests Really Give Us',
+    subtitle: 'Why reducing forests to carbon stocks misses most of the story',
+    category: 'Environmental Policy and Governance',
+    body: `## The Carbon Framing
 
-The Intergovernmental Panel on Climate Change publishes the most comprehensive scientific assessments of climate change available. These reports are rigorously researched, peer-reviewed, and represent a genuine consensus of thousands of scientists. They are invaluable.
+In recent years, forests have increasingly been discussed in the language of carbon — sequestration rates, carbon credits, offset markets. This framing has brought new funding to conservation and elevated forests in climate policy discussions.
 
-They also miss something important.
+But it has also narrowed the conversation in ways that carry real risks.
 
-## The Texture of Loss
+## What the Numbers Miss
 
-When a Bolivian Andean community watches the glacier that has defined their skyline for generations recede above the snowline—when it becomes clear that it will not return in their lifetimes, or their children's lifetimes—what happens?
+A forest is not primarily a carbon storage facility. It is a living system that provides water, regulates temperature, supports livelihoods, protects soil, sustains biodiversity, and anchors the cultural identities of millions of communities.
 
-The glacier was not just a water source. It was orientation. It was the landmark their grandparents used to navigate. It appeared in their stories, their ceremonies, their sense of who they are and where they come from.
+> "When we price only the carbon in a forest, we undervalue everything else the forest does — and we create incentives that can work against the communities who have protected it for generations."
 
-> "Climate grief is real, and it is particular. No two communities lose the same thing."
+## Community-Based Conservation
 
-## Solastalgia
+Across Africa, community-based conservation models have demonstrated that the most durable protection of forests comes not from external carbon markets but from the communities who live within and adjacent to those forests.
 
-The philosopher Glenn Albrecht coined the term "solastalgia" to describe the distress caused by environmental change in one's home environment. Unlike nostalgia—which is the pain of being away from home—solastalgia is the pain of home being changed around you while you remain.
+In Kenya, community forest associations have successfully negotiated management rights over gazetted forests, reducing illegal logging and increasing forest cover through locally designed and enforced rules.
 
-It is, he argues, a kind of mourning.
+These models work because they align conservation with livelihoods — they make it more valuable for communities to protect forests than to convert them.
 
-## Why This Matters for Policy
+## A Broader Vision
 
-The psychological and cultural dimensions of climate change are not peripheral to the crisis. They are central to it. Communities that have lost their relationship to place—through displacement, through the destruction of ecosystems they depended on, through the slow erosion of the seasonal rhythms that organized their lives—are communities that have lost something that cannot be restored by carbon markets.
+Effective environmental policy must account for the full range of ecosystem services forests provide — not just carbon, but water, biodiversity, climate regulation, and human wellbeing.
 
-The climate conversation needs more room for grief. For the specificity of what has been lost. For the acknowledgment that some of these losses are irreversible.
-
-This is not pessimism. It is honesty—and honesty, eventually, is the ground on which better action becomes possible.`,
+This requires moving beyond single-metric frameworks and toward integrated approaches that centre community rights, ecological complexity, and long-term resilience.`,
     imageUrl: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200&q=80',
     author: 'Verdant Space',
     publishedAt: '2024-05-10T10:00:00Z',
@@ -121,108 +118,102 @@ This is not pessimism. It is honesty—and honesty, eventually, is the ground on
   },
   {
     id: '4',
-    title: 'Mangrove Marvels: Carbon Sinks at the Edge of the Sea',
-    subtitle: 'Why protecting coastal wetlands may be our most underrated climate tool',
-    category: 'Marine Ecosystems',
+    title: 'Mangrove Restoration in East Africa: Lessons from the Coast',
+    subtitle: 'How coastal communities are leading the recovery of one of Africa\'s most vital ecosystems',
+    category: 'Community-Based Conservation',
     body: `## The Trees That Breathe Salt
 
-Mangroves are among the most extraordinary trees on Earth. They grow where other trees cannot—in the brackish water between land and sea, in the tidal zones where salt concentration shifts daily, where the ground itself is perpetually waterlogged.
+Mangroves are among the most extraordinary trees on Earth. They grow where other trees cannot — in the brackish water between land and sea, in tidal zones where salt concentration shifts daily.
 
-They have evolved remarkable adaptations: aerial roots that breathe above the waterline, specialized cells that exclude salt, seeds that germinate while still on the parent tree and float to new locations.
+Along the East African coast, mangrove forests have sustained fishing communities, protected shorelines from erosion, and sequestered carbon for centuries. Today, they are under serious threat.
 
-## An Outsize Climate Role
+## The Scale of Loss
 
-Mangroves store carbon at a rate that is, per hectare, several times greater than tropical rainforests. The dense, waterlogged soil beneath them traps organic matter that would otherwise decompose and release carbon—locking it away for centuries or even millennia.
+Kenya has lost over 20% of its mangrove cover in the past three decades, primarily due to charcoal production, coastal development, and unsustainable harvesting. Similar losses have been recorded in Tanzania and Mozambique.
 
-> "Protecting a hectare of mangrove may do more for the climate than any equivalent area of terrestrial forest."
+The consequences extend far beyond the forest itself. Mangroves are nursery grounds for fish species that support coastal livelihoods. Their root systems protect shorelines from storm surge and erosion. Their soils store carbon at rates several times higher than tropical rainforests.
 
-## The Threat
+> "When you lose the mangrove, you lose the fish. When you lose the fish, you lose the community."
 
-Mangrove forests are disappearing faster than almost any other ecosystem. Coastal aquaculture—particularly shrimp farming—has been the primary driver, converting vast stretches of coastal wetland into pond systems.
+## Community-Led Restoration
 
-The irony is acute: shrimp farms on former mangrove land often fail within a decade as soils acidify and nutrients deplete. The forest that sustained coastal fisheries for generations is gone, and the aquaculture that replaced it has collapsed.
+In Gazi Bay, Kenya, a community-led restoration programme has become one of the most cited examples of successful mangrove recovery in Africa. Women's groups have been central to both the planting and the monitoring work.
 
-## Restoration and Hope
+The programme combines ecological restoration with alternative livelihood development — ensuring that communities have income sources that don't depend on mangrove harvesting.
 
-Mangrove restoration is possible. Communities in the Philippines, Kenya, and Bangladesh have replanted thousands of hectares of coastal forest. The key, researchers have found, is letting natural regeneration guide the process—clearing invasive species and creating the right hydrological conditions, then letting the mangroves do the rest.
+## What Works
 
-Where restoration has worked, fish populations have recovered within years. The relationship between forest and sea is more resilient than we might have feared.`,
+The evidence from East Africa and beyond points to several consistent factors in successful mangrove restoration: community ownership of the process, integration with livelihood support, long-term monitoring, and letting natural regeneration guide where possible.
+
+The mangroves are resilient. Given the right conditions and community support, they come back.`,
     imageUrl: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?w=1200&q=80',
     author: 'Verdant Space',
     publishedAt: '2024-04-22T09:00:00Z',
-    readTime: '5 min read',
-  },
-  {
-    id: '5',
-    title: 'The Return of the Wolves: Trophic Cascades in Yellowstone',
-    subtitle: 'How one predator\'s reintroduction changed the course of rivers',
-    category: 'Biodiversity',
-    body: `## Wolves and Rivers
-
-In 1995, fourteen gray wolves were reintroduced to Yellowstone National Park after a 70-year absence. What followed became one of the most studied examples of ecological cascade effects in the scientific literature—and one of the most dramatic demonstrations of how ecosystems work.
-
-The wolves did not just kill elk. They changed how elk behaved.
-
-## Fear as an Ecological Force
-
-Elk, suddenly aware that predators had returned, stopped grazing in open valleys and along riverbanks where they were vulnerable. The vegetation in those areas recovered. Willows, aspens, and cottonwoods grew back along the streams. Beavers returned to build dams in the new willow thickets.
-
-Beaver dams created ponds. Ponds raised the water table. The water table sustained more diverse plant communities. The plant communities provided habitat for songbirds, small mammals, and insects.
-
-> "The wolves changed the behavior of the rivers themselves. The rivers ran straighter, with more stable banks—because the root systems of the recovered vegetation held the soil."
-
-## What This Teaches Us
-
-The Yellowstone case is a lesson in humility. Our intuitive models of ecosystems—in which the primary lever is the direct killing or protecting of particular species—are too simple.
-
-Ecology works through relationships, through fear and adaptation, through the way that the presence or absence of one animal ripples through an entire community. This is why conservation cannot be just about individual species. It must be about restoring and protecting the webs of relationship in which species are embedded.
-
-## Beyond Yellowstone
-
-Similar dynamics have been observed wherever large predators have been reintroduced: wolves in Europe, dingoes in Australia, sea otters in California. In each case, the ripple effects have extended far beyond the predator-prey relationship.
-
-The lesson is always the same: the natural world is more interconnected, more intelligent, and more resilient than our management models have typically assumed.`,
-    imageUrl: 'https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=1200&q=80',
-    author: 'Verdant Space',
-    publishedAt: '2024-04-05T11:00:00Z',
     readTime: '6 min read',
   },
   {
-    id: '6',
-    title: 'Seed Libraries as Resistance: How Communities Protect Agricultural Biodiversity',
-    subtitle: 'In the face of monoculture and corporate seed patents, local repositories hold history',
-    category: 'Indigenous Knowledge',
-    body: `## What a Seed Holds
+    id: '5',
+    title: 'Indigenous Knowledge and Forest Management in Africa',
+    subtitle: 'What generations of lived experience can teach modern conservation science',
+    category: 'Environmental Education',
+    body: `## A Different Kind of Knowledge
 
-A single seed holds the accumulated adaptation of thousands of years. The tomato varieties that thrived in the dry highlands of Peru, the bean varieties bred for the short growing seasons of highland Ethiopia, the rice varieties that survived cyclone flooding in the Bengal delta—these represent irreplaceable genetic and cultural heritage.
+Across Africa, communities have managed forests, water sources, and wildlife for generations using knowledge systems developed through centuries of observation, practice, and adaptive learning.
 
-Most of that heritage is at risk.
+This knowledge — sometimes called indigenous or traditional ecological knowledge — is not folklore. It is a sophisticated, evidence-based understanding of ecological systems, accumulated over timescales that formal science rarely matches.
 
-## The Industrial Narrowing
+## What It Looks Like in Practice
 
-The Green Revolution of the 1960s dramatically increased agricultural yields but did so by promoting a small number of high-yielding varieties at the expense of thousands of locally adapted ones. Today, 75% of global food supply comes from just 12 plants.
+In the Mau Forest Complex in Kenya, Ogiek communities have long used intricate calendars of forest indicators — the flowering of particular plants, the movements of particular animals — to guide their land use decisions. These indicators encode ecological knowledge that takes generations to accumulate.
 
-The consolidation of the global seed industry has accelerated this narrowing. Four companies now control more than 60% of the world's commercial seed market.
+In the forests of Central Africa, Baka communities maintain detailed mental maps of forest resources that span hundreds of square kilometres, tracking seasonal patterns and ecological relationships that no satellite can capture.
 
-## Seed Libraries as Resistance
+> "The elders know things about this forest that we are only beginning to understand with our instruments."
 
-Around the world, communities have responded by creating seed libraries—repositories where traditional varieties are preserved, shared, and regenerated through actual cultivation.
+## The Risks of Exclusion
 
-> "A seed in a freezer is an archive. A seed in a garden is a living relationship."
+When conservation programmes exclude or marginalise indigenous knowledge holders, they lose access to irreplaceable ecological intelligence. They also lose the community legitimacy that makes conservation durable.
 
-These are not museums. They are active cultivation networks, where seeds are grown out, adapted to current conditions, and distributed back to farmers. The act of replanting is itself a form of knowledge transmission.
+The most effective conservation outcomes in Africa have consistently involved the meaningful participation of local knowledge holders — not as subjects of conservation, but as leaders of it.
 
-## The Networks Holding Knowledge
+## Moving Forward
 
-In Ethiopia, the Seeds of Survival program has worked with farmers to identify and preserve traditional varieties that have since proven crucial as climate shifts alter growing conditions. In India, the Deccan Development Society manages community seed banks that serve hundreds of villages.
-
-These networks understand something that centralized gene banks don't: seeds are not just genetic material. They are embedded in knowledge systems—in the understanding of when and how to plant, in the varieties of cuisine that made particular crops valuable, in the social relationships through which seeds have always been exchanged.
-
-To preserve a seed, you must preserve the community of practice around it. And that is, ultimately, a political as much as a biological task.`,
+Integrating indigenous knowledge with contemporary science is not a matter of choosing one over the other. It is a matter of recognising that both offer partial, complementary views of complex systems — and that better conservation outcomes emerge when they are brought into genuine dialogue.`,
     imageUrl: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=80',
     author: 'Verdant Space',
     publishedAt: '2024-03-18T08:30:00Z',
     readTime: '7 min read',
+  },
+  {
+    id: '6',
+    title: 'Climate Adaptation in African Drylands: Nature-Based Solutions',
+    subtitle: 'How communities across the Sahel are working with nature to build resilience',
+    category: 'Nature-Based Solutions',
+    body: `## The Greening Sahel
+
+Across the Sahel region of Africa, one of the most remarkable environmental recoveries of the past century has been unfolding largely without fanfare. Millions of hectares of degraded dryland have been restored through a practice known as farmer-managed natural regeneration (FMNR).
+
+The principle is simple: instead of clearing all vegetation from fields, farmers protect and manage naturally regenerating trees and shrubs. The result, over time, is an agroforestry landscape that is more productive, more resilient, and better adapted to the increasingly erratic rainfall patterns associated with climate change.
+
+## Why It Works
+
+Trees in agricultural landscapes do several things at once. Their roots improve soil structure and water retention. Their canopy reduces evaporation and moderates temperature extremes. Their leaf litter adds organic matter to the soil. And many species fix nitrogen, reducing the need for chemical fertiliser.
+
+> "These trees are not competing with our crops. They are protecting them."
+
+## The Scale of Recovery
+
+In Niger alone, FMNR is estimated to have restored over 5 million hectares of degraded land, supporting the livelihoods of millions of smallholder farmers. Similar approaches are now being implemented across Burkina Faso, Mali, Senegal, and Ethiopia.
+
+## Nature-Based Solutions in Policy
+
+The success of approaches like FMNR has helped elevate nature-based solutions in African climate policy discussions. These are approaches that work with ecological processes rather than against them — building resilience through the restoration of functional ecosystems rather than through technological substitutes.
+
+The evidence is clear: in African drylands, nature-based solutions are not a compromise. They are often the most effective, most affordable, and most durable path to climate resilience.`,
+    imageUrl: 'https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=1200&q=80',
+    author: 'Verdant Space',
+    publishedAt: '2024-02-12T09:00:00Z',
+    readTime: '6 min read',
   },
 ]
 
@@ -230,85 +221,85 @@ export const seedGallery = [
   {
     id: 'g1',
     imageUrl: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80',
-    caption: 'Ancient Douglas Fir, Olympic Peninsula',
-    location: 'Washington, USA',
-    category: 'Forestry',
+    caption: 'Ancient Forest Canopy',
+    location: 'Aberdare Range, Kenya',
+    category: 'Forestry and Forest Conservation',
   },
   {
     id: 'g2',
     imageUrl: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&q=80',
     caption: 'Dawn on the Savanna',
     location: 'Maasai Mara, Kenya',
-    category: 'Biodiversity',
+    category: 'Community-Based Conservation',
   },
   {
     id: 'g3',
     imageUrl: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=900&q=80',
     caption: 'Retreating Glacier',
-    location: 'Patagonia, Argentina',
-    category: 'Climate Change',
+    location: 'Mount Kenya',
+    category: 'Climate Change and Adaptation',
   },
   {
     id: 'g4',
     imageUrl: 'https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=700&q=80',
-    caption: 'Boreal Lake at First Light',
-    location: 'Yukon, Canada',
-    category: 'Forestry',
+    caption: 'Highland Forest at First Light',
+    location: 'Mau Forest Complex, Kenya',
+    category: 'Forestry and Forest Conservation',
   },
   {
     id: 'g5',
     imageUrl: 'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=800&q=80',
     caption: 'Mangrove Aerial Roots',
-    location: 'Langkawi, Malaysia',
-    category: 'Marine Ecosystems',
+    location: 'Gazi Bay, Kenya',
+    category: 'Ecological Restoration',
   },
   {
     id: 'g6',
     imageUrl: 'https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=600&q=80',
-    caption: 'Grey Wolf at Dusk',
-    location: 'Yellowstone, Wyoming',
-    category: 'Biodiversity',
+    caption: 'Wildlife Corridor',
+    location: 'Tsavo, Kenya',
+    category: 'Community-Based Conservation',
   },
   {
     id: 'g7',
     imageUrl: 'https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=900&q=80',
     caption: 'Wildflower Meadow',
-    location: 'Swiss Alps',
+    location: 'Mount Elgon, Uganda',
     category: 'Ecological Restoration',
   },
   {
     id: 'g8',
     imageUrl: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=750&q=80',
-    caption: 'Aerial — Green River Delta',
-    location: 'Danube, Romania',
-    category: 'Ecological Restoration',
+    caption: 'Aerial — River Delta',
+    location: 'Tana River, Kenya',
+    category: 'Nature-Based Solutions',
   },
   {
     id: 'g9',
     imageUrl: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&q=80',
-    caption: 'Misty Waterfall, Cloud Forest',
-    location: 'Costa Rica',
-    category: 'Biodiversity',
+    caption: 'Waterfall, Rainforest',
+    location: 'Kakamega Forest, Kenya',
+    category: 'Forestry and Forest Conservation',
   },
   {
     id: 'g10',
     imageUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80',
-    caption: 'Mountain Summit, Sunrise',
-    location: 'Himalayas, Nepal',
-    category: 'Climate Change',
+    caption: 'Mountain Summit at Sunrise',
+    location: 'Rwenzori Mountains, Uganda',
+    category: 'Climate Change and Adaptation',
   },
   {
     id: 'g11',
     imageUrl: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=850&q=80',
-    caption: 'Heritage Seed Harvest',
-    location: 'Oaxaca, Mexico',
-    category: 'Indigenous Knowledge',
+    caption: 'Community Seed Nursery',
+    location: 'Rift Valley, Kenya',
+    category: 'Community-Based Conservation',
   },
   {
     id: 'g12',
     imageUrl: 'https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?w=700&q=80',
     caption: 'Old Growth Canopy',
-    location: 'Tongass, Alaska',
-    category: 'Forestry',
+    location: 'Arabuko-Sokoke Forest, Kenya',
+    category: 'Forestry and Forest Conservation',
   },
 ]

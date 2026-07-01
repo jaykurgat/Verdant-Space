@@ -1,28 +1,50 @@
 import { useState } from 'react'
-import { Mail, MapPin, Send, Check, Heart, Eye, Globe, Sprout } from 'lucide-react'
+import { Mail, MapPin, Send, Check, Shield, Leaf, Users, Lightbulb, Sprout, BookOpen } from 'lucide-react'
 import { useScrollFade } from '../hooks/useScrollFade'
 
 const values = [
   {
-    icon: Eye,
-    title: 'Honest Observation',
-    description: 'We look closely and report faithfully — without agenda, without simplification.',
+    icon: Shield,
+    title: 'Integrity',
+    description: 'We uphold honesty, transparency and scientific accuracy in everything we publish.',
   },
   {
-    icon: Heart,
-    title: 'Rooted Care',
-    description: 'Every piece of writing begins with a genuine love for the living world and the communities embedded within it.',
+    icon: Leaf,
+    title: 'Sustainability',
+    description: 'We promote responsible environmental stewardship for present and future generations.',
   },
   {
-    icon: Globe,
-    title: 'Systems Thinking',
-    description: 'Nothing in nature operates in isolation. We explore the connections, not just the components.',
+    icon: BookOpen,
+    title: 'Knowledge',
+    description: 'We believe informed people make better decisions for the environment.',
+  },
+  {
+    icon: Users,
+    title: 'Collaboration',
+    description: 'We value partnerships and diverse perspectives to create meaningful impact.',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Innovation',
+    description: 'We embrace new ideas and technologies to solve environmental challenges.',
   },
   {
     icon: Sprout,
-    title: 'Regenerative Vision',
-    description: 'We believe in the possibility of repair — ecological, social, and epistemic.',
+    title: 'Stewardship',
+    description: 'We encourage the responsible management and restoration of forests and ecosystems.',
   },
+]
+
+const focusAreas = [
+  'Forestry and Forest Conservation',
+  'Climate Change and Adaptation',
+  'Ecological Restoration',
+  'Environmental Policy and Governance',
+  'Community-Based Conservation',
+  'Nature-Based Solutions',
+  'Green Innovation and Technology',
+  'Environmental Research',
+  'Environmental Education',
 ]
 
 function ContactForm() {
@@ -46,16 +68,16 @@ function ContactForm() {
           <span className="accent-line">Get in Touch</span>
           <h2 className="heading-lg">Start a Conversation</h2>
           <p className="body-text">
-            Whether you have a story tip, want to collaborate, or simply want to share what's happening in your local ecosystem — Verdant Space is always listening.
+            Whether you are a student beginning your environmental journey, a forester managing forests, a policy maker shaping sustainable solutions, or simply a citizen who cares about the planet — Verdant Space is always listening.
           </p>
           <div className="space-y-4 pt-4">
             <div className="flex items-center gap-3 text-sm font-sans text-charcoal/70">
               <Mail size={16} className="text-verdant flex-shrink-0" />
-              hello@verdantspace.com
+              hello@verdantspace.org
             </div>
             <div className="flex items-center gap-3 text-sm font-sans text-charcoal/70">
               <MapPin size={16} className="text-verdant flex-shrink-0" />
-              Based in East Africa · Writing from everywhere
+              Africa · Writing from everywhere
             </div>
           </div>
         </div>
@@ -68,7 +90,7 @@ function ContactForm() {
               </div>
               <h3 className="heading-sm">Message received</h3>
               <p className="body-text text-sm max-w-xs">
-                Thank you for reaching out. I'll be in touch within a few days.
+                Thank you for reaching out. We'll be in touch within a few days.
               </p>
               <button
                 onClick={() => { setSent(false); setForm({ name: '', email: '', message: '' }) }}
@@ -87,7 +109,7 @@ function ContactForm() {
                   type="text"
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  placeholder="Jane Muriithi"
+                  placeholder="Your full name"
                   required
                   className="input-field"
                 />
@@ -100,7 +122,7 @@ function ContactForm() {
                   type="email"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  placeholder="jane@example.com"
+                  placeholder="your@email.com"
                   required
                   className="input-field"
                 />
@@ -123,9 +145,7 @@ function ContactForm() {
                 disabled={sending}
                 className="btn-primary w-full justify-center"
               >
-                {sending ? 'Sending…' : (
-                  <>Send Message <Send size={14} /></>
-                )}
+                {sending ? 'Sending…' : (<>Send Message <Send size={14} /></>)}
               </button>
             </form>
           )}
@@ -136,36 +156,43 @@ function ContactForm() {
 }
 
 export default function AboutPage() {
-  const heroRef = useScrollFade()
-  const storyRef = useScrollFade()
-  const valuesRef = useScrollFade()
+  const heroRef    = useScrollFade()
+  const storyRef   = useScrollFade()
+  const missionRef = useScrollFade()
+  const focusRef   = useScrollFade()
+  const valuesRef  = useScrollFade()
 
   return (
     <div className="min-h-screen pt-24">
-      {/* Header */}
+
+      {/* ── Header ───────────────────────────────────────── */}
       <div ref={heroRef} className="max-w-6xl mx-auto px-6 py-16">
         <span className="accent-line">Our Story</span>
-        <h1 className="heading-xl mt-3 mb-6">About Verdant Space</h1>
-        <div className="w-20 h-1 bg-sage" />
+        <h1 className="heading-xl mt-3 mb-4">About Verdant Space</h1>
+        <p className="body-text max-w-2xl text-lg leading-8">
+          A trusted digital platform that transforms environmental knowledge into practical insights,
+          connecting science, communities and decision-makers to build a more sustainable future.
+        </p>
+        <div className="w-20 h-1 bg-sage mt-8" />
       </div>
 
-      {/* Origin Story */}
-      <section ref={storyRef} className="py-12 px-6 bg-sage/10">
+      {/* ── Origin Story ─────────────────────────────────── */}
+      <section ref={storyRef} className="py-16 px-6 bg-sage/10">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+          <div className="space-y-5">
             <h2 className="heading-lg">Why I Started Verdant Space</h2>
             <div className="space-y-4 body-text leading-8">
               <p>
-                Verdant Space began with a frustration. The environmental stories I most needed to read — rooted in specific places, written with genuine depth, free from the distortions of both doom and false optimism — were hard to find.
+                It was born from the simple belief that knowledge has the power to transform how people relate to nature.
               </p>
               <p>
-                I had spent years working in conservation, watching how communities understood their landscapes in ways that rarely made it into scientific papers or news cycles. The grandmother who knew which plants signaled soil health. The fisher who could read currents that no instrument measured. The reforestation worker who understood, from watching, that trees planted too close to each other competed rather than cooperated.
+                Working in the forestry field, I have experienced firsthand the immense value of forests and ecosystems — not only for biodiversity but also for livelihoods, water security, climate resilience and the well-being of communities.
               </p>
               <p>
-                Verdant Space is an attempt to honor that kind of knowledge. To put it in conversation with ecology, with policy, with the larger stories we tell about our relationship to the living world.
+                At the same time, I have observed that much of the valuable research, field experience, and environmental knowledge remains inaccessible to the people who need it most.
               </p>
               <p>
-                It is, in the oldest sense of the word, a field journal.
+                I started Verdant Space to bridge that gap. Whether someone is a student beginning their environmental journey, a forester managing forests, a policy maker shaping sustainable solutions, or simply a citizen who cares about the planet — this space is for you. It aims to provide reliable, relevant and engaging content.
               </p>
             </div>
           </div>
@@ -177,25 +204,84 @@ export default function AboutPage() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-4 -left-4 bg-forest p-6 rounded-sm max-w-[200px] hidden md:block">
-              <p className="font-accent text-sage text-sm italic">
-                "Every forest is a library. You just have to learn to read it."
+            <div className="absolute -bottom-4 -left-4 bg-forest p-6 rounded-sm max-w-[220px] hidden md:block">
+              <p className="font-accent text-sage text-sm italic leading-relaxed">
+                "Connecting people, Nature and Knowledge."
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values */}
-      <section ref={valuesRef} className="py-24 px-6 bg-warm-white">
+      {/* ── Vision & Mission ──────────────────────────────── */}
+      <section ref={missionRef} className="py-24 px-6 bg-forest">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="space-y-4">
+            <p className="font-accent text-sage text-base">Our Vision</p>
+            <h3 className="font-serif text-2xl text-warm-white leading-snug">
+              Africa's leading digital platform for environmental knowledge
+            </h3>
+            <p className="font-sans text-sm text-warm-white/60 leading-7">
+              Inspiring informed action for healthy forests, resilient ecosystems, and sustainable communities.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <p className="font-accent text-sage text-base">Our Mission</p>
+            <h3 className="font-serif text-2xl text-warm-white leading-snug">
+              Connect people, nature, and knowledge
+            </h3>
+            <p className="font-sans text-sm text-warm-white/60 leading-7">
+              Creating and sharing trusted environmental content that promotes forest conservation, biodiversity protection, climate resilience, ecological restoration, and sustainable natural resource management.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <p className="font-accent text-sage text-base">Our Purpose</p>
+            <h3 className="font-serif text-2xl text-warm-white leading-snug">
+              Make knowledge accessible, practical and impactful
+            </h3>
+            <p className="font-sans text-sm text-warm-white/60 leading-7">
+              We bridge the gap between science, policy, and communities — providing reliable information that empowers people to protect and restore our natural world.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Areas of Focus ───────────────────────────────── */}
+      <section ref={focusRef} className="py-24 px-6 bg-warm-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div className="space-y-6">
+              <span className="accent-line">What We Cover</span>
+              <h2 className="heading-lg">Areas of Focus</h2>
+              <p className="body-text">
+                Our content spans the full breadth of environmental knowledge — from field-level conservation to policy and governance.
+              </p>
+            </div>
+            <ul className="space-y-3">
+              {focusAreas.map((area) => (
+                <li key={area} className="flex items-center gap-3 font-sans text-sm text-charcoal/80">
+                  <span className="w-1.5 h-1.5 rounded-full bg-verdant flex-shrink-0" />
+                  {area}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Core Values ──────────────────────────────────── */}
+      <section ref={valuesRef} className="py-24 px-6 bg-sage/10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 space-y-3">
             <span className="accent-line">What Guides Us</span>
             <h2 className="heading-lg">Core Values</h2>
+            <p className="body-text max-w-xl mx-auto">
+              Our brand promise: delivering credible, evidence-based environmental knowledge that informs decisions, inspires action, and supports sustainable development.
+            </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {values.map((v) => (
-              <div key={v.title} className="flex gap-5 p-6 border border-sage/20 rounded-sm hover:border-verdant/30 transition-colors">
+              <div key={v.title} className="flex gap-4 p-6 border border-sage/20 bg-warm-white rounded-sm hover:border-verdant/30 transition-colors">
                 <div className="w-10 h-10 bg-sage/15 rounded-sm flex items-center justify-center flex-shrink-0">
                   <v.icon size={18} className="text-verdant" />
                 </div>

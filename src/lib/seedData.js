@@ -142,7 +142,7 @@ Restoration is not just an ecological project. It is a relational one — built 
     title: 'Beyond Carbon: Understanding What Forests Really Give Us',
     subtitle: 'Why reducing forests to carbon stocks misses most of the story',
     category: 'Environmental Policies and Governance',
-    subCategory: 'Structures, Institutions, and Processes',
+    subCategory: 'Resource Management',
     body: `## The Carbon Framing
 
 In recent years, forests have increasingly been discussed in the language of carbon — sequestration rates, carbon credits, offset markets. This framing has brought new funding to conservation and elevated forests in climate policy discussions.
@@ -213,8 +213,8 @@ The mangroves are resilient. Given the right conditions and community support, t
     id: '5',
     title: 'Indigenous Knowledge and Forest Management in Africa',
     subtitle: 'What generations of lived experience can teach modern conservation science',
-    category: 'Think Pieces',
-    subCategory: '',
+    category: 'Forestry',
+    subCategory: 'Management and Economics',
     body: `## A Different Kind of Knowledge
 
 Across Africa, communities have managed forests, water sources, and wildlife for generations using knowledge systems developed through centuries of observation, practice, and adaptive learning.
@@ -247,8 +247,8 @@ Integrating indigenous knowledge with contemporary science is not a matter of ch
     id: '6',
     title: 'Climate Adaptation in African Drylands: Nature-Based Solutions',
     subtitle: 'How communities across the Sahel are working with nature to build resilience',
-    category: 'Restoration',
-    subCategory: 'Nature-Based Solutions',
+    category: 'Climate Change',
+    subCategory: 'Adaptation',
     body: `## The Greening Sahel
 
 Across the Sahel region of Africa, one of the most remarkable environmental recoveries of the past century has been unfolding largely without fanfare. Millions of hectares of degraded dryland have been restored through a practice known as farmer-managed natural regeneration (FMNR).
